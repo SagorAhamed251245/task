@@ -1,25 +1,38 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MessagesNav from "./MessagesNav";
 import UserMessage from "./UserMessage";
 import Mymessages from "./Mymessages";
 import TimeLength from "./TimeLength";
+import SendMessages from "./SendMessages";
 
 const MessagesContainer = () => {
   const [isActions, setIsActions] = useState({ isActions: false, _id: null });
-  console.log("isActions :>> ", isActions);
   const [chatMessages, setChatMessages] = useState([
-    {
-      text: "Hello! How can I help you today? Hello! How can I help you today?Hello! How can I help you today?Hello! How can I help you today?  ",
-      isUser: true,
-    },
-    { text: "Hello! How can I help you today?  ", isUser: true },
-    { text: "Hello! How can I help you today? ", isUser: true },
-    { text: "Hello! How can I help you today? ", isUser: true },
-    { text: "Hello! How can I help you today?", isUser: false },
-    { text: "Hello! How can I help you today?", isUser: true },
-    { text: "Hello! How can I help you today?", isUser: true },
+    { text: null, _id: null, time: null },
   ]);
+  const randomId = Math.random(0, 1000);
+  const d = new Date();
+  const formattedTime = d.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  const sendSms = () => {
+    console.log("cliekced :>> ", "cliekced");
+    if (document.getElementById("send")) {
+      const text = document.getElementById("send").value;
+      setChatMessages((prevMessages) => {
+        return [
+          ...prevMessages,
+          { text: text, _id: randomId, time: formattedTime },
+        ];
+      });
+      document.getElementById("send").value = "";
+    }
+  };
+
+  console.table("chatMessages :>> ", chatMessages);
   return (
     <section className=" messages-container scrollbar-hidden">
       <MessagesNav />
@@ -49,21 +62,46 @@ const MessagesContainer = () => {
             This Is a demo 3
           </UserMessage>
           <TimeLength time={"Yesterday"} />
-          <Mymessages setIsActions={setIsActions} isActions={isActions} id={10}>
+          <Mymessages
+            setIsActions={setIsActions}
+            isActions={isActions}
+            id={10}
+            time={"11: 30pm"}
+          >
             this is umy Lorem ipsum dolor, sit amet consectetur adipisicing
             elit. Sapiente eveniet labore minima temporibus tempora iusto ab
             voluptatibus molestias in molestiae consectetur illo exercitationem
             maiores, vel illum quidem? Alias, perspiciatis quia.
           </Mymessages>
           <TimeLength time={"Today"} />
-          <Mymessages setIsActions={setIsActions} isActions={isActions} id={12}>
+          <Mymessages
+            setIsActions={setIsActions}
+            isActions={isActions}
+            id={12}
+            time={"11: 30pm"}
+          >
             this is umy Lorem ipsum dolor, sit amet consectetur adipisicing
             elit. Sapiente eveniet labore minima temporibus tempora iusto ab
             voluptatibus molestias in molestiae consectetur illo exercitationem
             maiores, vel illum quidem? Alias, perspiciatis quia.
           </Mymessages>
+          {chatMessages.map(
+            (chat, index) =>
+              chat.text && (
+                <Mymessages
+                  key={index}
+                  setIsActions={setIsActions}
+                  isActions={isActions}
+                  id={chat?._id}
+                  time={chat?.time}
+                >
+                  {chat?.text}
+                </Mymessages>
+              )
+          )}
         </div>
       </div>
+      <SendMessages sendSms={sendSms} />
     </section>
   );
 };

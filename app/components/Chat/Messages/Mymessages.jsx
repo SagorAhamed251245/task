@@ -1,6 +1,6 @@
 import React from "react";
 
-const Mymessages = ({ children, setIsActions, isActions, id }) => {
+const Mymessages = ({ children, setIsActions, isActions, id, time }) => {
   return (
     <div
       className={`messages  
@@ -25,7 +25,7 @@ const Mymessages = ({ children, setIsActions, isActions, id }) => {
 
         <div className={` my-text `}>
           <div>
-            {children} <p>1.33 pm</p>
+            {children} <p>{time}</p>
           </div>
           {/* action */}
           <div
