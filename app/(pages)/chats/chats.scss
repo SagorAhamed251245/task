@@ -1,0 +1,308 @@
+@import "../../globalScss/variables.module.scss";
+
+.chats-Container {
+  display: grid;
+  padding-left: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  height: 85vh;
+
+  .people-container {
+    border: 1px solid black;
+    padding: 20px;
+    grid-column: 1 / 5;
+    grid-row: 1;
+    background-color: #fff;
+    border-radius: 10px;
+
+    .all-chats {
+      .chat-type {
+        display: flex;
+        margin: 20px 0px;
+        gap: 50px;
+        > p {
+          color: $next-color;
+          cursor: pointer;
+        }
+      }
+      .single-chat {
+        height: 60px;
+        margin: 5px 0;
+        border-radius: 5px;
+        &:hover {
+          background-color: $primary-color;
+        }
+        .sms-time {
+          color: $next-color;
+          > div {
+            display: flex;
+            justify-content: end;
+            color: white;
+          }
+        }
+        > div {
+          display: flex;
+          height: 100%;
+          align-items: center;
+          padding: 5px;
+          > div {
+            margin-left: 5px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .user-name {
+              font-size: large;
+              font-weight: bold;
+              span {
+                font-size: small;
+                font-weight: normal;
+              }
+            }
+            .message {
+              font-weight: bold;
+              font-size: small;
+            }
+          }
+          img {
+            height: 35px;
+            border-radius: 100%;
+            width: 35px;
+          }
+        }
+      }
+    }
+
+    .search-people {
+      input {
+        width: 75%;
+        background-color: $primary-color;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      button {
+        width: 20%;
+        @include bg-gradient;
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: 5%;
+      }
+    }
+  }
+
+  .messages-container {
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    grid-column: 5 / 13;
+    position: relative;
+    grid-row: 1;
+    padding: 20px;
+    padding-top: 0px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+    .messages-nav {
+      height: 100px;
+      position: sticky;
+      background-color: white;
+      top: 0%;
+      display: flex;
+
+      align-items: center;
+
+      z-index: 40;
+      .left-nav {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        > .img-div {
+          position: relative;
+          > div {
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+            right: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: #62cc7b;
+            border-radius: 100%;
+          }
+        }
+        img {
+          width: 3rem;
+          height: 3rem;
+          margin-right: 5px;
+          border-radius: 9999px;
+        }
+      }
+      .right-nav {
+        width: 50%;
+        display: flex;
+        gap: 10px;
+        justify-content: end;
+        > div {
+          background-color: $primary-color;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .messages-box {
+      position: relative;
+      > div {
+        flex: 1 1 0%;
+
+        .messages {
+          margin: 5px 0px;
+          position: relative;
+          display: flex;
+          > div {
+            border-radius: 0.25rem;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            > .img-div {
+              height: 100%;
+              > div {
+                position: relative;
+                display: flex;
+                align-items: end;
+                height: 100%;
+                > img {
+                  width: 2rem;
+                  height: 2rem;
+                  margin-right: 5px;
+                  border-radius: 9999px;
+                }
+                > div {
+                  position: absolute;
+                  z-index: 10;
+                  bottom: 0;
+                  right: 5px;
+                  width: 12px;
+                  height: 12px;
+                  background-color: #62cc7b;
+                  border-radius: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-sms-type {
+  @include text-gradient;
+}
+.justify-s {
+  justify-content: flex-start;
+}
+.justify-e {
+  justify-content: flex-end;
+}
+.user-text {
+  text-align: justify;
+  background-color: $primary-color;
+  width: auto;
+  max-width: 80%;
+  position: relative;
+
+  .action {
+    position: absolute;
+    top: 0%;
+    z-index: 20;
+    right: -230px;
+
+    color: $next-color;
+    background-color: $natural-color;
+    width: 200px;
+    > ul > li {
+      border-bottom: 1px solid #cfcfcf;
+      margin-bottom: 5px;
+      cursor: pointer;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  > p {
+    width: 100%;
+    > p {
+      font-size: smaller;
+      text-align: end;
+      width: 100%;
+    }
+  }
+
+  padding: 10px;
+  border-radius: 10px;
+  color: $next-color;
+}
+.my-text {
+  text-align: justify;
+  position: relative;
+  background-color: green;
+  color: white;
+  .action {
+    position: absolute;
+    top: 0%;
+    z-index: 20;
+    left: -230px;
+    color: $next-color;
+    background-color: $natural-color;
+    width: 200px;
+    > ul > li {
+      border-bottom: 1px solid #cfcfcf;
+      margin-bottom: 5px;
+      cursor: pointer;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+  > p {
+    width: 100%;
+    > p {
+      font-size: smaller;
+      text-align: end;
+      width: 100%;
+    }
+  }
+  width: auto;
+  max-width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  z-index: 10;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 0.6px;
+  left: 0.75rem;
+  border-right: 15px solid $natural-color;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  z-index: 10;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0.75rem;
+  border-left: 15px solid $natural-color;
+}
