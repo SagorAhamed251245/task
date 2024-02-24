@@ -139,6 +139,7 @@
       .right-nav {
         width: 50%;
         display: flex;
+        position: relative;
         gap: 10px;
         justify-content: end;
         > div {
@@ -307,7 +308,17 @@
   right: 0.75rem;
   border-left: 15px solid $natural-color;
 }
-
+.arrow-right-nav {
+  width: 0;
+  height: 0;
+  z-index: 10;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  border-left: 15px solid $natural-color;
+}
 .time-length {
   position: static;
   z-index: 10;
@@ -352,5 +363,25 @@
   }
   .btn-p {
     @include bg-gradient;
+  }
+}
+.nav-action {
+  position: absolute;
+  top: 40%;
+  z-index: 20;
+  left: -190px;
+  color: $next-color;
+  background-color: $natural-color;
+  width: 200px;
+  > ul > li {
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
 }

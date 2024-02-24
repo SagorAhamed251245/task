@@ -11,7 +11,7 @@ const NavLink = ({ data, key }) => {
     <Link
       href={data.path}
       key={key}
-      className={`li ${navPath === data.path && "active"}`}
+      className={` ${navPath === data.path ? "active" : "li"}`}
     >
       <span>
         <Image

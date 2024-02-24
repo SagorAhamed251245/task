@@ -1,10 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import AllPeople from "./AllPeople";
+import FilterContext from "@/app/contex/FilterContext";
+import AllGroups from "./AllGroups";
 
 const AllChats = () => {
   let allPeoples = [1, 2, 3];
-  const [chatType, SetChatType] = useState("private");
+
+  const { chatType, SetChatType } = useContext(FilterContext);
 
   return (
     <div className="all-chats">
@@ -25,7 +28,7 @@ const AllChats = () => {
       <section>
         {allPeoples?.map((people, index) => (
           <div key={index}>
-            <AllPeople />
+            {chatType === "private" ? <AllPeople /> : <AllGroups />}
           </div>
         ))}
       </section>

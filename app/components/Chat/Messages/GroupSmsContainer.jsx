@@ -1,12 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import MessagesNav from "./MessagesNav";
-import UserMessage from "./UserMessage";
+
 import Mymessages from "./Mymessages";
 import TimeLength from "./TimeLength";
 import SendMessages from "./SendMessages";
+import GroupSms from "./GroupSms";
 
-const MessagesContainer = () => {
+const GroupSmsContainer = () => {
   const [isActions, setIsActions] = useState({ isActions: false, _id: null });
   const [chatMessages, setChatMessages] = useState([
     { text: null, _id: null, time: null },
@@ -30,35 +31,42 @@ const MessagesContainer = () => {
       document.getElementById("send").value = "";
     }
   };
-
   return (
     <section className=" messages-container scrollbar-hidden">
       <MessagesNav setIsActions={setIsActions} isActions={isActions} id={0} />
       <div className="messages-box">
         <div
           className={`absolute top-0   opacity-0
-           w-full h-full bg-black ${
-             isActions.isActions === true ? "z-10 " : "z-0 "
-           }`}
+       w-full h-full bg-black ${
+         isActions.isActions === true ? "z-10 " : "z-0 "
+       }`}
           onClick={() => setIsActions({ isActions: false, _id: null })}
         ></div>
         <div>
-          <UserMessage setIsActions={setIsActions} isActions={isActions} id={1}>
-            This Is a demo 1 This Is a demo 1This Is a demo 1This Is a demo
-            1This Is a demo 1This Is a demo 1This Is a demo 1
-          </UserMessage>
+          <GroupSms setIsActions={setIsActions} isActions={isActions} id={1}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda,
+            nisi! Vel saepe eveniet tenetur nihil placeat quibusdam iure modi
+            pariatur odit ex provident harum quos corrupti expedita eum, neque
+            repellat?
+          </GroupSms>
           <TimeLength time={"11-9-2024, Monday"} />
-          <UserMessage setIsActions={setIsActions} isActions={isActions} id={2}>
-            This Is a demo 2
-          </UserMessage>
-          <UserMessage
+          <GroupSms setIsActions={setIsActions} isActions={isActions} id={2}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum rerum
+            natus cumque excepturi. Harum, rerum! Rem saepe adipisci obcaecati
+            nam voluptas. Earum, vero dolorum quo quia nemo, voluptates dolores
+            nam illum repellat laudantium nulla? Alias facere dolore eum vero
+            corporis labore? Tempore beatae ea eaque commodi doloremque
+            doloribus, nisi libero?
+          </GroupSms>
+          <GroupSms
             userPhoto={true}
             setIsActions={setIsActions}
             isActions={isActions}
             id={3}
           >
-            This Is a demo 3
-          </UserMessage>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+            labore!
+          </GroupSms>
           <TimeLength time={"Yesterday"} />
           <Mymessages
             setIsActions={setIsActions}
@@ -104,4 +112,4 @@ const MessagesContainer = () => {
   );
 };
 
-export default MessagesContainer;
+export default GroupSmsContainer;

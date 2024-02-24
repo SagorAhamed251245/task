@@ -1,14 +1,11 @@
-import React from "react";
-
 import "./chats.scss";
-import PeopleContainer from "@/app/components/Chat/Peoples/PeopleContainer";
-import MessagesContainer from "@/app/components/Chat/Messages/MessagesContainer";
+
+import ChatComp from "@/app/components/Chat/ChatComp";
 
 const ChatsPage = () => {
   return (
     <div className="chats-Container">
-      <PeopleContainer />
-      <MessagesContainer />
+      <ChatComp />
     </div>
   );
 };
