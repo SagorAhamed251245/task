@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import MessagesNav from "./MessagesNav";
 import UserMessage from "./UserMessage";
 import Mymessages from "./Mymessages";
+import TimeLength from "./TimeLength";
 
 const MessagesContainer = () => {
   const [isActions, setIsActions] = useState({ isActions: false, _id: null });
@@ -35,6 +36,7 @@ const MessagesContainer = () => {
             This Is a demo 1 This Is a demo 1This Is a demo 1This Is a demo
             1This Is a demo 1This Is a demo 1This Is a demo 1
           </UserMessage>
+          <TimeLength time={"11-9-2024, Monday"} />
           <UserMessage setIsActions={setIsActions} isActions={isActions} id={2}>
             This Is a demo 2
           </UserMessage>
@@ -46,12 +48,14 @@ const MessagesContainer = () => {
           >
             This Is a demo 3
           </UserMessage>
+          <TimeLength time={"Yesterday"} />
           <Mymessages setIsActions={setIsActions} isActions={isActions} id={10}>
             this is umy Lorem ipsum dolor, sit amet consectetur adipisicing
             elit. Sapiente eveniet labore minima temporibus tempora iusto ab
             voluptatibus molestias in molestiae consectetur illo exercitationem
             maiores, vel illum quidem? Alias, perspiciatis quia.
           </Mymessages>
+          <TimeLength time={"Today"} />
           <Mymessages setIsActions={setIsActions} isActions={isActions} id={12}>
             this is umy Lorem ipsum dolor, sit amet consectetur adipisicing
             elit. Sapiente eveniet labore minima temporibus tempora iusto ab

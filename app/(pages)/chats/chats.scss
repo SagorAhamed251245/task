@@ -306,3 +306,16 @@
   right: 0.75rem;
   border-left: 15px solid $natural-color;
 }
+
+.time-length {
+  position: static;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  > p {
+    @include bg-gradient;
+    @include text-gradient;
+  }
+}
