@@ -13,15 +13,7 @@ const NavLink = ({ data, key }) => {
       key={key}
       className={` ${navPath === data.path ? "active" : "li"}`}
     >
-      <span>
-        <Image
-          width={100}
-          height={100}
-          src={data?.icon}
-          alt=""
-          className="size-4"
-        />
-      </span>
+      <span>{data.icon}</span>
       <span>{data?.title}</span>
     </Link>
   );
