@@ -1,11 +1,10 @@
 "use client";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState } from "react";
 import MessagesNav from "./MessagesNav";
 import UserMessage from "./UserMessage";
 import Mymessages from "./Mymessages";
 import TimeLength from "./TimeLength";
 import SendMessages from "./SendMessages";
-import FilterContext from "@/app/contex/FilterContext";
 
 const MessagesContainer = () => {
   const [isActions, setIsActions] = useState({ isActions: false, _id: null });
@@ -31,7 +30,7 @@ const MessagesContainer = () => {
       document.getElementById("send").value = "";
     }
   };
-  const { deviceSize } = useContext(FilterContext);
+
   return (
     <section className={` messages-container scrollbar-hidden  `}>
       <MessagesNav setIsActions={setIsActions} isActions={isActions} id={0} />

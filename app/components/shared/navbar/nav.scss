@@ -71,11 +71,64 @@
 }
 
 .top-nav {
+  @include respond(md) {
+    background-color: #fff;
+    padding: 0px 20px 0px 20px;
+  }
+  > .mobile-left {
+    display: none;
+    @include respond(md) {
+      display: block;
+    }
+  }
+  > .mobile-right {
+    display: none;
+    @include respond(md) {
+      display: block;
+    }
+  }
+  > .mobile-center {
+    display: none;
+    @include respond(md) {
+      display: block;
+    }
+  }
   height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > .top-left {
+    margin-left: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    @include respond(md) {
+      display: none;
+    }
+  }
+  > .top-right {
+    display: flex;
+    height: 7vh;
+    width: 50%;
+    gap: 15px;
+    justify-content: end;
+    align-items: center;
+    @include respond(md) {
+      margin-right: 20px;
+      display: none;
+    }
+    > .notify {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   @include respond(md) {
     position: sticky;
     z-index: 101;
     top: 0%;
-    background-color: red;
   }
 }
