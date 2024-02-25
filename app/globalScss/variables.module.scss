@@ -1,6 +1,26 @@
 $primary-color: #f5f6f8;
 $next-color: #636363;
 $natural-color: #e6e6e6;
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == md) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == sm) {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+}
 
 @mixin bg-gradient {
   background: rgba(204, 23, 106, 1);

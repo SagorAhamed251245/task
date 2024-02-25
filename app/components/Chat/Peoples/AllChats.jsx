@@ -5,7 +5,7 @@ import FilterContext from "@/app/contex/FilterContext";
 import AllGroups from "./AllGroups";
 
 const AllChats = () => {
-  let allPeoples = [1, 2, 3];
+  let allPeoples = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5];
 
   const { chatType, SetChatType } = useContext(FilterContext);
 

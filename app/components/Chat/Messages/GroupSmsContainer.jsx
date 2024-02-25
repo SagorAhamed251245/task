@@ -32,7 +32,7 @@ const GroupSmsContainer = () => {
     }
   };
   return (
-    <section className=" messages-container scrollbar-hidden">
+    <section className="hidden  messages-container scrollbar-hidden lg:block">
       <MessagesNav setIsActions={setIsActions} isActions={isActions} id={0} />
       <div className="messages-box">
         <div

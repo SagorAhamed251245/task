@@ -33,7 +33,7 @@ const MessagesContainer = () => {
   };
   const { deviceSize } = useContext(FilterContext);
   return (
-    <section className={` messages-container scrollbar-hidden lg:block hidden`}>
+    <section className={` messages-container scrollbar-hidden  `}>
       <MessagesNav setIsActions={setIsActions} isActions={isActions} id={0} />
       <div className="messages-box">
         <div

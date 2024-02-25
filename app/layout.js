@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <FilterProvider>
-        <body className={inter.className}>
-          <main className="bg-[#F5F6F8] p-5 flex">
+        <body className={`${inter.className} scrollbar-hidden `}>
+          <main className="bg-[#F5F6F8] lg:p-5 flex ">
             <SideNavBar />
             <section className="w-full">
               <Topnavbar />

@@ -10,6 +10,11 @@
 .navContainer {
   height: 95vh;
   width: 292px;
+
+  @include respond(md) {
+    visibility: hidden;
+    width: 0;
+  }
   background-color: white;
   border-radius: 20px;
 }
@@ -67,4 +72,10 @@
 
 .top-nav {
   height: 10vh;
+  @include respond(md) {
+    position: sticky;
+    z-index: 101;
+    top: 0%;
+    background-color: red;
+  }
 }
