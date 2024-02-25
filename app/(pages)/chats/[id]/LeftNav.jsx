@@ -6,8 +6,11 @@ const LeftNav = () => {
   const { mobileChat, setMobileChat } = useContext(FilterContext);
   return (
     <>
-      <Link href={"/chats"} className={"md:hidden"}>
-        back
+      <Link
+        href={"/chats"}
+        className={"md:hidden   flex justify-start items-center"}
+      >
+        <img src="/icons/arroew.png" alt="" className={"w-full "} />
       </Link>
       <div className="img-div">
         <img src="/icons/user.jpg" alt="" />

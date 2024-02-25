@@ -9,6 +9,9 @@
   height: 85vh;
   @include respond(md) {
     display: inline;
+    margin: 0;
+    padding: 0;
+    gap: 0;
   }
 
   .people-container {
@@ -107,6 +110,10 @@
     position: relative;
     grid-row: 1;
     padding: 20px;
+    @include respond(md) {
+      border: none;
+      border-radius: 0px;
+    }
     padding-top: 0px;
     border: 1px solid black;
     background-color: white;
@@ -125,6 +132,7 @@
       .left-nav {
         width: 50%;
         display: flex;
+
         align-items: center;
         > .img-div {
           position: relative;
@@ -155,6 +163,10 @@
         > div {
           background-color: $primary-color;
           padding: 10px;
+          @include respond(md) {
+            padding: 0px;
+            background-color: white;
+          }
           border-radius: 5px;
         }
       }
@@ -171,7 +183,7 @@
           display: flex;
           > div {
             border-radius: 0.25rem;
-            width: 50%;
+            width: 80%;
             display: flex;
             align-items: center;
             gap: 5px;
