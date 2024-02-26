@@ -33,7 +33,13 @@ const MessagesContainer = () => {
 
   return (
     <section className={` messages-container scrollbar-hidden  `}>
-      <MessagesNav setIsActions={setIsActions} isActions={isActions} id={0} />
+      <MessagesNav
+        setIsActions={setIsActions}
+        isActions={isActions}
+        id={"#4453s4"}
+        img={"/icons/user.jpg"}
+        name={"FC"}
+      />
       <div className="messages-box">
         <div
           className={`absolute top-0   opacity-0

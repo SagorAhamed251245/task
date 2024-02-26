@@ -5,11 +5,11 @@ const AllGroups = () => {
     <>
       <Link href={"chats/id"} className={`single-chat lg:hidden`}>
         <div>
-          <img className="useImg" src="/icons/user.jpg" alt="" />
+          <img className="useImg" src="/icons/group.jpg" alt="" />
           <div>
             <div>
               <p className="user-name">
-                We are Dev <span>#4453s4</span>
+                We are Dev <span>#3432fre2</span>
               </p>
               <p className="message">Hassan a video message</p>
             </div>
@@ -26,7 +26,7 @@ const AllGroups = () => {
       </Link>
       <div className={`single-chat hidden lg:block`}>
         <div>
-          <img className="useImg" src="/icons/user.jpg" alt="" />
+          <img className="useImg" src="/icons/group.jpg" alt="" />
           <div>
             <div>
               <p className="user-name">

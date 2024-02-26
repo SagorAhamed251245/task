@@ -2,12 +2,12 @@ import React from "react";
 import LeftNav from "./LeftNav";
 import RightNav from "./RightNav";
 
-const MessagesNav = ({ setIsActions, isActions, id }) => {
+const MessagesNav = ({ setIsActions, isActions, id, img, name }) => {
   return (
     <section className="messages-nav">
       {/* left side */}
       <div className="left-nav">
-        <LeftNav />
+        <LeftNav id={id} img={img} name={name} />
       </div>
       {/* right side */}
       <div className="right-nav">

@@ -10,6 +10,8 @@
 .navContainer {
   height: 95vh;
   width: 292px;
+  overflow-y: auto;
+  position: relative;
 
   @include respond(md) {
     visibility: hidden;
@@ -17,11 +19,22 @@
   }
   background-color: white;
   border-radius: 20px;
+  .logout {
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    margin-left: 25px;
+    align-items: center;
+  }
 }
 
 .navTitle {
   padding: 20px;
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: #fff;
   flex-direction: column;
   justify-content: center;
   align-items: center;

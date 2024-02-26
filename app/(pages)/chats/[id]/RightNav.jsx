@@ -16,7 +16,7 @@ const RightNav = ({ setIsActions, isActions, id }) => {
         onClick={() =>
           setIsActions({ isActions: !isActions.isActions, _id: id })
         }
-        className="relative flex items-center justify-center w-10"
+        className="relative flex items-center justify-center w-3 lg:w-10"
       >
         <img src="/icons/dot.png" alt="" />
         {/* action */}

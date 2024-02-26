@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react";
 import AllPeople from "./AllPeople";
 import FilterContext from "@/app/contex/FilterContext";
 import AllGroups from "./AllGroups";
+import CreatGroup from "./CreatGroup";
 
 const AllChats = () => {
   let allPeoples = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5];
@@ -25,6 +26,9 @@ const AllChats = () => {
           Group Chat
         </p>
       </div>
+      {/* creat group */}
+      {chatType === "group" && <CreatGroup />}
+
       <section>
         {allPeoples?.map((people, index) => (
           <div key={index}>

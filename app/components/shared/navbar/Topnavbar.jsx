@@ -12,7 +12,7 @@ const Topnavbar = () => {
           <img src="/icons/notify.png" alt="" />
         </div>
         <div className={"userPro"}>
-          <img src="/icons/userprofile.png" alt="" />
+          <img src="/icons/Group 26257.svg" alt="" />
         </div>
       </div>
       {/* mobile  */}
@@ -23,7 +23,7 @@ const Topnavbar = () => {
       </div>
       <div className={"mobile-center"}>
         <div className={"notify"}>
-          <img src="/icons/Frame (1).png" alt="" />
+          <img src="/icons/logo.svg" alt="" />
         </div>
       </div>
       <div className={"mobile-right"}>

@@ -33,7 +33,13 @@ const GroupSmsContainer = () => {
   };
   return (
     <section className=" messages-container scrollbar-hidden">
-      <MessagesNav setIsActions={setIsActions} isActions={isActions} id={0} />
+      <MessagesNav
+        setIsActions={setIsActions}
+        isActions={isActions}
+        id={"#3432fre2"}
+        img={"/icons/group.jpg"}
+        name={"We are Dev"}
+      />
       <div className="messages-box">
         <div
           className={`absolute top-0   opacity-0

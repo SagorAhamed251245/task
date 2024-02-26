@@ -10,7 +10,7 @@ const GroupSms = ({ children, userPhoto, setIsActions, isActions, id }) => {
       <div className="">
         <div className={`img-div ${!userPhoto && "invisible"}`}>
           <div>
-            <img src="/icons/user.jpg" alt="" />
+            <img src="/icons/group.jpg" alt="" />
             <div></div>
           </div>
         </div>
