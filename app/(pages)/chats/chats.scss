@@ -169,10 +169,6 @@
             height: 12px;
             background-color: #62cc7b;
             border-radius: 100%;
-            @include respond(md) {
-              width: 5px;
-              height: 5px;
-            }
           }
         }
         img {
