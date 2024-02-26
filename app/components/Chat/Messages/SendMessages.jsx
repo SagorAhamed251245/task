@@ -3,7 +3,16 @@ import React from "react";
 const SendMessages = ({ sendSms }) => {
   return (
     <section className={"send-sms"}>
-      <input type="text" id={"send"} />
+      <div className={"send-input"}>
+        <input type="text" id={"send"} placeholder="Type your message..." />
+        <div>
+          <img
+            src="/icons/smile.svg
+          "
+            alt=""
+          />
+        </div>
+      </div>
       <button>
         <img src="/icons/gallery.png" alt="" className="h-4 " />
       </button>

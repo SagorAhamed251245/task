@@ -86,7 +86,7 @@ const GroupSms = ({ children, userPhoto, setIsActions, isActions, id }) => {
           <img
             src="/icons/threedot.png"
             alt=""
-            className="w-1 h-4 cursor-pointer "
+            className="hidden w-1 h-4 cursor-pointer lg:block"
           />
           <div
             className={` arrow-left ${isActions._id === id ? " " : "hidden"} ${

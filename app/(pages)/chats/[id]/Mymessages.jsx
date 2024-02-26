@@ -15,7 +15,11 @@ const Mymessages = ({ children, setIsActions, isActions, id, time }) => {
           }
           className="relative w-1 h-4 "
         >
-          <img src="/icons/threedot.png" alt="" className="w-1 h-4" />
+          <img
+            src="/icons/threedot.png"
+            alt=""
+            className="hidden w-1 h-4 cursor-pointer lg:block"
+          />
           <div
             className={` arrow-right ${isActions._id === id ? " " : "hidden"} ${
               isActions.isActions === true ? " " : "hidden"
