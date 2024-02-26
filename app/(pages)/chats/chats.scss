@@ -74,7 +74,6 @@
             justify-content: space-between;
             width: 100%;
             .user-name {
-              font-size: large;
               font-weight: bold;
               span {
                 font-size: small;
@@ -170,6 +169,10 @@
             height: 12px;
             background-color: #62cc7b;
             border-radius: 100%;
+            @include respond(md) {
+              width: 5px;
+              height: 5px;
+            }
           }
         }
         img {
@@ -229,6 +232,10 @@
                   height: 2rem;
                   margin-right: 5px;
                   border-radius: 9999px;
+                  @include respond(md) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                  }
                 }
                 > div {
                   position: absolute;
@@ -239,6 +246,12 @@
                   height: 12px;
                   background-color: #62cc7b;
                   border-radius: 100%;
+                  @include respond(md) {
+                    width: 8px;
+                    height: 8px;
+                    right: 1px;
+                    bottom: 1;
+                  }
                 }
               }
             }
@@ -262,8 +275,11 @@
   text-align: justify;
   background-color: $primary-color;
   width: auto;
-  max-width: 100%;
+  max-width: 80%;
   position: relative;
+  @include respond(md) {
+    max-width: 100%;
+  }
 
   .action {
     position: absolute;

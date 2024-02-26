@@ -9,6 +9,7 @@
 }
 body {
   background-color: #f5f6f8;
+  font-size: small;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {

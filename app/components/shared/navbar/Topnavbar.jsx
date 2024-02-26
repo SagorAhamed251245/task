@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+import { useContext } from "react";
 import "./nav.scss";
-import SearchPeople from "../../Chat/Peoples/SearchPeople";
+
+import FilterContext from "@/app/contex/FilterContext";
 const Topnavbar = () => {
+  const { openNav, setOpenNav } = useContext(FilterContext);
+
   return (
     <section className="top-nav">
       <div className={"top-left"}>
@@ -16,7 +20,7 @@ const Topnavbar = () => {
         </div>
       </div>
       {/* mobile  */}
-      <div className={"mobile-left"}>
+      <div className={"mobile-left"} onClick={() => setOpenNav(!openNav)}>
         <div className={"hamberger"}>
           <img src="/icons/Group 1171282471.png" alt="" />
         </div>

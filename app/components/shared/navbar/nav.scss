@@ -12,10 +12,12 @@
   width: 292px;
   overflow-y: auto;
   position: relative;
+  font-size: small;
 
   @include respond(md) {
-    visibility: hidden;
-    width: 0;
+    z-index: 500;
+    top: 50px;
+    padding-bottom: 50px;
   }
   background-color: white;
   border-radius: 20px;
