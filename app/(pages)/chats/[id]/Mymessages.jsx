@@ -28,8 +28,9 @@ const Mymessages = ({ children, setIsActions, isActions, id, time }) => {
         </div>
 
         <div className={` my-text `}>
-          <div>
-            {children} <p>{time}</p>
+          <div className="mySms">
+            <div>{children}</div>
+            <p>{time}</p>
           </div>
           {/* action */}
           <div

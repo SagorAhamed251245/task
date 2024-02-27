@@ -2,7 +2,7 @@ import React from "react";
 
 const SendMessages = ({ sendSms }) => {
   return (
-    <section className={"send-sms bg-red-500"}>
+    <section className={"send-sms "}>
       <div className={"send-input"}>
         <input type="text" id={"send"} placeholder=" Message..." />
         <div>

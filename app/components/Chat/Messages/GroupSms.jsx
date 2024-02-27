@@ -16,8 +16,9 @@ const GroupSms = ({ children, userPhoto, setIsActions, isActions, id }) => {
         </div>
 
         <div className={` user-text `}>
-          <div>
-            {children} <p>1.33 pm</p>
+          <div className="userSms">
+            <div>{children}</div>
+            <p>11: 30 PM</p>
           </div>
 
           {/* action */}
